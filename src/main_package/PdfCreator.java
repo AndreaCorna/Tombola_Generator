@@ -28,7 +28,7 @@ public class PdfCreator {
    //special font sizes
    Font bfBold12 = new Font(FontFamily.HELVETICA, 12, Font.BOLD, new BaseColor(0, 0, 0)); 
 
-   Font bfBold16 = new Font(FontFamily.HELVETICA, 22, Font.BOLD, new BaseColor(0, 0, 0)); 
+   Font bfBold22 = new Font(FontFamily.HELVETICA, 22, Font.BOLD, new BaseColor(0, 0, 0)); 
 
  
    //file path
@@ -61,16 +61,16 @@ public class PdfCreator {
 		   }
 		   for(int column = 0; column < matrix[page][row].length; column++){
 			   if(matrix[page][row][column] == 0){
-				   insertCell(table, "", Element.ALIGN_CENTER, 1, bfBold16,false);
+				   insertCell(table, "", Element.ALIGN_CENTER, 1, bfBold22,false);
 
 			   }else{
-				   insertCell(table, ""+matrix[page][row][column], Element.ALIGN_CENTER, 1, bfBold16,false);
+				   insertCell(table, ""+matrix[page][row][column], Element.ALIGN_CENTER, 1, bfBold22,false);
 
 			   }
 			  
 		   } 
 		   if(row % 3 == 2){
-			   insertCell(table, "", Element.ALIGN_CENTER, 9, bfBold16,false);
+			   insertCell(table, "", Element.ALIGN_CENTER, 9, bfBold22,false);
 			   table.setHeaderRows(1);
 			   table.setHorizontalAlignment(Element.ALIGN_LEFT);
 
